@@ -7,6 +7,7 @@ export class BoardView extends Container {
     }
 
     private build(): void {
-        //
+        // const sprite = new Sprite(Texture.from('board.png'));
+        // this.addChild(sprite);
     }
 }

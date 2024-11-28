@@ -7,7 +7,6 @@ import { fitDimension } from './Utils';
 import { assets } from './assets/assetsNames/assets';
 import { atlases } from './assets/assetsNames/atlas';
 import { fonts } from './assets/assetsNames/fonts';
-import { spines } from './assets/assetsNames/spines';
 import { mapCommands } from './configs/EventCommandPairs';
 import { ScreenSizeConfig } from './configs/ScreenSizeConfig';
 import { MainGameEvents, WindowEvent } from './events/MainEvents';
@@ -17,7 +16,7 @@ class App extends Application {
 
     public constructor() {
         super({
-            backgroundColor: 0xffffff,
+            backgroundColor: 0xa1a1a1,
             backgroundAlpha: 1,
             powerPreference: 'high-performance',
             antialias: true,
@@ -63,22 +62,17 @@ class App extends Application {
     private async loadAssets(): Promise<void> {
         for (const asset of assets) {
             const { name, path } = asset;
-            Assets.add(name, path);
+            Assets.add({ alias: name, src: path });
             await Assets.load(name);
         }
         for (const atlas of atlases) {
             const { name, json } = atlas;
-            Assets.add(name, json);
+            Assets.add({ alias: name, src: json });
             await Assets.load(name);
         }
         for (const font of fonts) {
             const { name, path } = font;
-            Assets.add(name, path);
-            await Assets.load(name);
-        }
-        for (const spine of spines) {
-            const { key: name, jsonURL, atlasURL } = spine;
-            Assets.add(name, jsonURL);
+            Assets.add({ alias: name, src: path });
             await Assets.load(name);
         }
         SoundController.loadSounds();
