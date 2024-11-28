@@ -34108,7 +34108,6 @@ const getBackgroundGridPortraitConfig = () => {
 ;// CONCATENATED MODULE: ./src/views/BackgroundView.ts
 
 
-
 class BackgroundView extends PixiGrid {
     constructor() {
         super();
@@ -34121,8 +34120,8 @@ class BackgroundView extends PixiGrid {
         super.rebuild(this.getGridConfig());
     }
     build() {
-        const bkg = Sprite.from('bkg.jpg');
-        this.setChild('background', bkg);
+        // const bkg = Sprite.from('bkg.jpg');
+        // this.setChild('background', bkg);
     }
 }
 
@@ -34221,7 +34220,8 @@ class BoardView extends Container {
         this.build();
     }
     build() {
-        //
+        // const sprite = new Sprite(Texture.from('board.png'));
+        // this.addChild(sprite);
     }
 }
 
@@ -34360,18 +34360,15 @@ const SoundController = new SoundControl();
 /* harmony default export */ const src_SoundController = (SoundController);
 
 ;// CONCATENATED MODULE: ./src/assets/assetsNames/assets.ts
-const assets = [{ name: 'bkg.jpg', path: 'assets/uncompressed/bkg.jpg' }];
+const assets = [];
 
 ;// CONCATENATED MODULE: ./src/assets/assetsNames/atlas.ts
 const atlases = [
-    { name: 'game-ui', json: 'assets/atlas/game-ui@1.png.json', png: 'assets/atlas/game-ui.png' },
+    { name: 'game', json: 'assets/atlas/game@1.png.json', png: 'assets/atlas/game.png' },
 ];
 
 ;// CONCATENATED MODULE: ./src/assets/assetsNames/fonts.ts
 const fonts = [{ name: 'Filmotype_Major', path: 'assets/fonts/Filmotype_Major.otf' }];
-
-;// CONCATENATED MODULE: ./src/assets/assetsNames/spines.ts
-const spines = [];
 
 ;// CONCATENATED MODULE: ./src/events/MainEvents.ts
 const WindowEvent = {
@@ -34525,11 +34522,10 @@ var App_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argu
 
 
 
-
 class App extends Application {
     constructor() {
         super({
-            backgroundColor: 0xffffff,
+            backgroundColor: 0xa1a1a1,
             backgroundAlpha: 1,
             powerPreference: 'high-performance',
             antialias: true,
@@ -34567,22 +34563,17 @@ class App extends Application {
         return App_awaiter(this, void 0, void 0, function* () {
             for (const asset of assets) {
                 const { name, path } = asset;
-                Assets.add(name, path);
+                Assets.add({ alias: name, src: path });
                 yield Assets.load(name);
             }
             for (const atlas of atlases) {
                 const { name, json } = atlas;
-                Assets.add(name, json);
+                Assets.add({ alias: name, src: json });
                 yield Assets.load(name);
             }
             for (const font of fonts) {
                 const { name, path } = font;
-                Assets.add(name, path);
-                yield Assets.load(name);
-            }
-            for (const spine of spines) {
-                const { key: name, jsonURL, atlasURL } = spine;
-                Assets.add(name, jsonURL);
+                Assets.add({ alias: name, src: path });
                 yield Assets.load(name);
             }
             src_SoundController.loadSounds();
