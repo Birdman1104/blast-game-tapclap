@@ -34380,6 +34380,21 @@ const MainGameEvents = {
     MainViewReady: "MainGameEventsMainViewReady",
 };
 
+;// CONCATENATED MODULE: ./src/configs/GameConfig.ts
+const GAME_CONFIG = Object.freeze({
+    moves: 25,
+    colors: [
+        //
+        'red',
+        'green',
+        'blue',
+        'yellow',
+        'purple',
+    ],
+    adjacentTilesCount: 2,
+    targetScore: 100,
+});
+
 ;// CONCATENATED MODULE: ./src/models/ObservableModel.ts
 
 const getUUID = (() => {
@@ -34413,13 +34428,20 @@ class ObservableModel {
 
 ;// CONCATENATED MODULE: ./src/models/GameModel.ts
 
+
 var GameState;
 (function (GameState) {
     GameState[GameState["Unknown"] = 0] = "Unknown";
+    GameState[GameState["Playing"] = 1] = "Playing";
+    GameState[GameState["Win"] = 2] = "Win";
+    GameState[GameState["Lose"] = 3] = "Lose";
 })(GameState || (GameState = {}));
 class GameModel extends ObservableModel {
     constructor() {
         super('GameModel');
+        this._moves = 0;
+        this._score = 0;
+        this._targetScore = 0;
         this._state = GameState.Unknown;
         this.makeObservable();
     }
@@ -34429,8 +34451,32 @@ class GameModel extends ObservableModel {
     set state(value) {
         this._state = value;
     }
+    get moves() {
+        return this._moves;
+    }
+    set moves(value) {
+        this._moves = value;
+    }
+    get score() {
+        return this._score;
+    }
+    set score(value) {
+        this._score = value;
+    }
+    get targetScore() {
+        return this._targetScore;
+    }
+    set targetScore(value) {
+        this._targetScore = value;
+    }
+    setState(state) {
+        this._state = state;
+    }
     init() {
-        this._state = GameState.Unknown;
+        const { moves, targetScore } = GAME_CONFIG;
+        this._moves = moves;
+        this._targetScore = targetScore;
+        this.setState(GameState.Playing);
     }
 }
 

@@ -120,7 +120,7 @@
         "y": 0.5
       }
     },
-    "blue copy.png": {
+    "blue.png": {
       "frame": {
         "x": 447,
         "y": 254,
@@ -148,150 +148,6 @@
       "frame": {
         "x": 447,
         "y": 452,
-        "w": 171,
-        "h": 192
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 171,
-        "h": 192
-      },
-      "sourceSize": {
-        "w": 171,
-        "h": 192
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "purple copy.png": {
-      "frame": {
-        "x": 3,
-        "y": 658,
-        "w": 171,
-        "h": 192
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 171,
-        "h": 192
-      },
-      "sourceSize": {
-        "w": 171,
-        "h": 192
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "red copy.png": {
-      "frame": {
-        "x": 180,
-        "y": 650,
-        "w": 171,
-        "h": 192
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 171,
-        "h": 192
-      },
-      "sourceSize": {
-        "w": 171,
-        "h": 192
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "yellow copy.png": {
-      "frame": {
-        "x": 357,
-        "y": 650,
-        "w": 171,
-        "h": 192
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 171,
-        "h": 192
-      },
-      "sourceSize": {
-        "w": 171,
-        "h": 192
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "progress_bkg.png": {
-      "frame": {
-        "x": 624,
-        "y": 254,
-        "w": 137,
-        "h": 103
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 137,
-        "h": 103
-      },
-      "sourceSize": {
-        "w": 137,
-        "h": 104
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "progress.png": {
-      "frame": {
-        "x": 624,
-        "y": 363,
-        "w": 107,
-        "h": 86
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 107,
-        "h": 86
-      },
-      "sourceSize": {
-        "w": 107,
-        "h": 86
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "blue.png": {
-      "frame": {
-        "x": 447,
-        "y": 254,
         "w": 171,
         "h": 192
       },
@@ -378,6 +234,54 @@
       "sourceSize": {
         "w": 171,
         "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "progress_bkg.png": {
+      "frame": {
+        "x": 624,
+        "y": 254,
+        "w": 137,
+        "h": 103
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 137,
+        "h": 103
+      },
+      "sourceSize": {
+        "w": 137,
+        "h": 104
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "progress.png": {
+      "frame": {
+        "x": 624,
+        "y": 363,
+        "w": 107,
+        "h": 86
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 107,
+        "h": 86
+      },
+      "sourceSize": {
+        "w": 107,
+        "h": 86
       },
       "pivot": {
         "x": 0.5,
